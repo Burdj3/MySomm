@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WineDishes">
+    tools:context=".WineDishes"
+    android:background="@color/wine">
 
     <Button
         android:layout_width="wrap_content"
@@ -12,6 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:id="@+id/chickenButton"
+        android:backgroundTint="@color/black"
         android:layout_marginRight="10dp"
         android:text="Chicken"/>
 
@@ -20,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:backgroundTint="@color/black"
         android:id="@+id/beefButton"
         android:layout_toRightOf="@+id/chickenButton"
         android:text="Beef"/>
@@ -29,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:backgroundTint="@color/black"
         android:id="@+id/fishButton"
         android:layout_toLeftOf="@+id/chickenButton"
         android:layout_marginRight="10dp"
@@ -39,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:backgroundTint="@color/black"
         android:id="@+id/turkeyButton"
         android:layout_below="@+id/chickenButton"
         android:text="Turkey"/>
@@ -48,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:backgroundTint="@color/black"
         android:id="@+id/desertButton"
         android:layout_above="@+id/chickenButton"
         android:text="Dessert"/>

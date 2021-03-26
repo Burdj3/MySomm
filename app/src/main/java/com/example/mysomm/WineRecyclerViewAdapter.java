@@ -37,14 +37,9 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter<WineRecyclerVi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.txtWine.setText(wines.get(position).getName());
         holder.txtType.setText(wines.get(position).getType());
-        holder.txtAge.setText(wines.get(position).getAge());
         holder.txtTaste.setText(wines.get(position).getTaste());
-        holder.txtPriceRange.setText(wines.get(position).getPriceRange());
+        holder.txtDescription.setText(wines.get(position).getDescription());
 
-        Glide.with(context)
-                .asBitmap()
-                .load(wines.get(position).getImageUrl())
-                .into(holder.image);
     }
 
     @Override
@@ -59,17 +54,14 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter<WineRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView txtWine, txtType, txtAge, txtTaste, txtPriceRange;
+        private TextView txtWine, txtType, txtTaste, txtDescription;
         private CardView parent;
-        private ImageView image;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtWine = itemView.findViewById(R.id.txtWine);
             txtType = itemView.findViewById(R.id.txtType);
-            txtAge = itemView.findViewById(R.id.txtAge);
             txtTaste = itemView.findViewById(R.id.txtTaste);
-            txtPriceRange = itemView.findViewById(R.id.txtPriceRange);
-            image = itemView.findViewById(R.id.image);
+            txtDescription = itemView.findViewById(R.id.txtDescription);
         }
     }
 

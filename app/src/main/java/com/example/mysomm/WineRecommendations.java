@@ -20,9 +20,10 @@ public class WineRecommendations extends AppCompatActivity {
         wineRecyclerView = findViewById(R.id.wineDishRecyclerView);
 
         ArrayList<Wine> wines = new ArrayList<>();
-        wines.add(new Wine("Oaked Chardonnay", "Type: White", "Age: 3-5 Years", "Taste: Sweet", "Price: $200-$300", "https://www.broudys.com/images/products/img4982.png"));
-        wines.add(new Wine("Carbernet Sauvignon","Type: Red","Age: 7-10 Years","Taste: Dry","Price: $10-$30","https://images.squarespace-cdn.com/content/v1/5c1a51eff2e6b12463ebc813/1546953866128-MZ0MPZTD16P9LB2L9YRX/ke17ZwdGBToddI8pDm48kCiC6x0kNpxliGpzQTkOLNUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8PaoYXhp6HxIwZIk7-Mi3Tsic-L2IOPH3Dwrhl-Ne3Z2ppk8fIk4OUdzzAJ58dNz9ksAnbOUWC6fgQEHg0Bz14hkOpdljO7Z-5qh0zg85Jnj/the-seeker-cab.jpg"));
-        wines.add(new Wine("Test2","White2","12","Sweet2","$$$2", ""));
+        wines.add(new Wine("Oaked Chardonnay", "Type: White", "Taste: Sweet", "Oaked Chardonnays are rich, full-bodied and have additional flavors of vanilla, butter and even caramel from the oak. A cool climate, buttery Chardonnay will have more citrus flavors versus a warm climate Chardonnay, which will have more tropical fruit flavors."));
+        wines.add(new Wine("Carbernet Sauvignon","Type: Red","Taste: Dry", "Carbernet Sauvignon is one of the most popular red wine grapes. This wine tends to be robust with medium acidity and tannins and flavors of rich, dark fruit. It has slightly elevated levels of alcohol for red wine and pairs well with food."));
+        wines.add(new Wine("Chenin Blanc", "Type: White", "Dry", "Chenin Blanc is very diverse in its styles, from sparkling wines and lean, dry whites to sweet, golden nectars and brandy. It is often known for its notes of honey and straw as well as a palate that is rich in stone-fruit flavors."));
+        wines.add(new Wine("Shiraz", "Type: Red", "Sweet", "Shiraz wines are well known for their rich and juicy mid-palate. You can expect to taste flavours of pepper, spice and sweet red fruit. We also often get a different feel on the palate, strong on the front in the mouth and on the finish but with a slightly different mid-palate feel."));
 
         WineRecyclerViewAdapter adapter = new WineRecyclerViewAdapter(this);
         adapter.setWines(wines);

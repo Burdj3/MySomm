@@ -10,8 +10,8 @@
     app:cardElevation="10dp">
 
     <RelativeLayout
-        android:layout_width="137dp"
-        android:layout_height="291dp">
+        android:layout_width="wrap_content"
+        android:layout_height="300dp">
 
         <TextView
             android:id="@+id/txtWine"
@@ -20,8 +20,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="7dp"
             android:text="Wine Name"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtType"
@@ -33,7 +32,7 @@
             android:text="Wine Type"
             android:textStyle="italic" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/txtAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,19 +40,19 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="7dp"
             android:text="Wine Age"
-            android:textStyle="italic" />
+            android:textStyle="italic" />-->
 
         <TextView
             android:id="@+id/txtTaste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtAge"
+            android:layout_below="@+id/txtType"
             android:layout_marginStart="5dp"
             android:layout_marginTop="7dp"
             android:text="Wine Taste"
             android:textStyle="italic" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/txtPriceRange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,16 +60,27 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="7dp"
             android:text="Wine Price"
-            android:textStyle="italic" />
+            android:textStyle="italic" />-->
 
-        <ImageView
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTaste"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:width="150dp"
+            android:height="250dp"
+            android:text="Description"
+            android:textStyle="italic" />
+        <!--<ImageView
             android:id="@+id/image"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_below="@id/txtPriceRange"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background" />-->
     </RelativeLayout>
 
 
