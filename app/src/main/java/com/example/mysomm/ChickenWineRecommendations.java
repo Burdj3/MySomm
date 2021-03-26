@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class WineRecommendations extends AppCompatActivity {
+public class ChickenWineRecommendations extends AppCompatActivity {
 
     private RecyclerView wineRecyclerView;
 
@@ -18,7 +18,7 @@ public class WineRecommendations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wine_recommendations);
 
-        wineRecyclerView = findViewById(R.id.wineDishRecyclerView);
+        wineRecyclerView = findViewById(R.id.chickenWineDishRecyclerView);
 
         ArrayList<Wine> wines = new ArrayList<>();
         wines.add(new Wine("Oaked Chardonnay", "Type: White", "Taste: Sweet", "Oaked Chardonnays are rich, full-bodied and have additional flavors of vanilla, butter and even caramel from the oak. A cool climate, buttery Chardonnay will have more citrus flavors versus a warm climate Chardonnay, which will have more tropical fruit flavors."));
@@ -31,7 +31,6 @@ public class WineRecommendations extends AppCompatActivity {
 
         wineRecyclerView.setAdapter(adapter);
         wineRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //wineRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
 
     }

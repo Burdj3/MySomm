@@ -9,34 +9,68 @@ import android.widget.Button;
 
 public class WineDishes extends AppCompatActivity {
 
-    private Button chickenButton;
-    private Button beefButton;
+    private Button whiteMeatButton;
+    private Button redMeatButton;
     private Button fishButton;
-    private Button turkeyButton;
+    private Button starchButton;
     private Button dessertButton;
+    private Button cheesesButton;
+    private Button shellFishButton;
+    private Button curedMeatButton;
+    private Button vegButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wine_dishes);
 
-        chickenButton = findViewById(R.id.chickenButton);
-        beefButton = findViewById(R.id.beefButton);
+        whiteMeatButton = findViewById(R.id.whiteMeatButton);
+        redMeatButton = findViewById(R.id.redMeatButton);
         fishButton = findViewById(R.id.fishButton);
-        turkeyButton = findViewById(R.id.turkeyButton);
+        starchButton = findViewById(R.id.starchButton);
         dessertButton = findViewById(R.id.desertButton);
+        cheesesButton = findViewById(R.id.cheeseButton);
+        shellFishButton = findViewById(R.id.shellFishButton);
+        curedMeatButton = findViewById(R.id.curedMeatButton);
+        vegButton = findViewById(R.id.vegetablesButton);
 
-        chickenButton.setOnClickListener(new View.OnClickListener() {
+        whiteMeatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWineRecommendations();
+                openChickenWineRecommendations();
+            }
+        });
+
+        redMeatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBeefWineRecommendations();
+            }
+        });
+
+        fishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFishWineRecommendations();
             }
         });
     }
 
-    public void openWineRecommendations()
+    public void openChickenWineRecommendations()
     {
-        Intent intent2 = new Intent(this, WineRecommendations.class);
-        startActivity(intent2);
+        Intent intent = new Intent(this, ChickenWineRecommendations.class);
+        startActivity(intent);
+    }
+
+    public void openBeefWineRecommendations()
+    {
+        Intent intent = new Intent(this, BeefWineRecommendations.class);
+        startActivity(intent);
+    }
+
+    public void openFishWineRecommendations()
+    {
+        Intent intent = new Intent(this, FishWineRecommendations.class);
+        startActivity(intent);
     }
 }

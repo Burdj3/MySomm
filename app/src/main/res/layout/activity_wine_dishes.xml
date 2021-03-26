@@ -8,54 +8,105 @@
     android:background="@color/wine">
 
     <Button
+        android:id="@+id/whiteMeatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:id="@+id/chickenButton"
         android:backgroundTint="@color/black"
-        android:layout_marginRight="10dp"
-        android:text="Chicken"/>
+        android:text="White Meat"
+        android:textSize="10dp"
+        />
 
     <Button
+        android:id="@+id/redMeatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/whiteMeatButton"
         android:backgroundTint="@color/black"
-        android:id="@+id/beefButton"
-        android:layout_toRightOf="@+id/chickenButton"
-        android:text="Beef"/>
+        android:text="Red Meat"
+        android:layout_marginLeft="10dp"
+        android:textSize="11dp"
+        />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:backgroundTint="@color/black"
         android:id="@+id/fishButton"
-        android:layout_toLeftOf="@+id/chickenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/whiteMeatButton"
+        android:backgroundTint="@color/black"
+        android:text="Fish"
         android:layout_marginRight="10dp"
-        android:text="Fish"/>
+        />
 
     <Button
+        android:id="@+id/starchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/whiteMeatButton"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:backgroundTint="@color/black"
-        android:id="@+id/turkeyButton"
-        android:layout_below="@+id/chickenButton"
-        android:text="Turkey"/>
+        android:text="Starches"
+        android:textSize="11dp"
+        />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:backgroundTint="@color/black"
         android:id="@+id/desertButton"
-        android:layout_above="@+id/chickenButton"
-        android:text="Dessert"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/whiteMeatButton"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/black"
+        android:text="Dessert"
+        />
+
+    <Button
+        android:id="@+id/vegetablesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fishButton"
+        android:backgroundTint="@color/black"
+        android:text="Veg."
+        android:layout_marginLeft="58dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Shell Fish"
+        android:layout_marginLeft="58dp"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@id/fishButton"
+        android:id="@+id/shellFishButton"
+        android:textSize="10dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Cheeses"
+        android:layout_marginLeft="264dp"
+        android:layout_below="@id/redMeatButton"
+        android:id="@+id/cheeseButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Cured Meat"
+        android:layout_marginLeft="264dp"
+        android:layout_above="@id/redMeatButton"
+        android:id="@+id/curedMeatButton"
+        android:textSize="11dp"/>
+
+
+
 
 </RelativeLayout>
