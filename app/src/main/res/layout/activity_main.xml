@@ -1,38 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/wine">
+    android:background="@color/wine"
+    tools:context=".MainActivity">
+
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/wineDishButton"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Wine Dish Recommendations"
-        android:backgroundTint="@color/black"/>
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_button"
+        android:text="pairings"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
         android:id="@+id/wineCollectionButton"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/wineDishButton"
-        android:layout_centerHorizontal="true"
-        android:text="Wine Collection"/>
+        android:background="@drawable/rounded_button"
+        android:text="Wine Collection"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wineDishButton"
+        app:layout_constraintVertical_bias="0.066" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/wineSurveyButton"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/wineCollectionButton"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button"
         android:text="Wine Survey"
-        android:backgroundTint="@color/black"/>
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wineCollectionButton"
+        app:layout_constraintVertical_bias="0.1" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
