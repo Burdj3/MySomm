@@ -8,33 +8,40 @@
     android:background="@color/wine">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:id="@+id/wineDishButton"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Wine Dish Recommendations"
-        android:backgroundTint="@color/wine_dark"
+        android:text="pairings"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:background="@drawable/rounded_button"
         />
 
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/wine_dark"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:id="@+id/wineCollectionButton"
         android:layout_below="@+id/wineDishButton"
         android:layout_centerHorizontal="true"
         android:text="Wine Collection"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:background="@drawable/rounded_button"
         />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:id="@+id/wineSurveyButton"
         android:layout_below="@+id/wineCollectionButton"
         android:layout_centerHorizontal="true"
         android:text="Wine Survey"
-        android:backgroundTint="@color/wine_dark"
+        android:background="@drawable/rounded_button"
+        android:textStyle="bold"
+        android:textSize="25sp"
         />
 
 
