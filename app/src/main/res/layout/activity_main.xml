@@ -14,16 +14,18 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Wine Dish Recommendations"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="@color/wine_dark"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/wine_dark"
         android:id="@+id/wineCollectionButton"
         android:layout_below="@+id/wineDishButton"
         android:layout_centerHorizontal="true"
-        android:text="Wine Collection"/>
+        android:text="Wine Collection"
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -32,7 +34,8 @@
         android:layout_below="@+id/wineCollectionButton"
         android:layout_centerHorizontal="true"
         android:text="Wine Survey"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="@color/wine_dark"
+        />
 
 
 </RelativeLayout>

@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="wine">#722F37</color>
+    <color name="pastel_light">#BFA5A6</color>
+    <color name="pastel_dark">#897172</color>
+    <color name="olive">#767840</color>
+    <color name="olive_dark">#444812</color>
+    <color name="wine_dark">#2A0010</color>
 </resources>
