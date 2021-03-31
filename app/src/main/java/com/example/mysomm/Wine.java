@@ -3,19 +3,15 @@ package com.example.mysomm;
 public class Wine {
     private String Name;
     private String Type;
-    private String Age;
     private String Taste;
-    private String priceRange;
-    private String imageUrl;
+    private String Description;
 
-    public Wine(String name, String type, String age, String taste, String pricerange, String imageUrl)
+    public Wine(String name, String type, String taste, String description)
     {
         Name = name;
         this.Type = type;
-        this.Age = age;
         this.Taste = taste;
-        this.priceRange = pricerange;
-        this.imageUrl = imageUrl;
+        this.Description = description;
     }
 
 
@@ -35,14 +31,6 @@ public class Wine {
         Type = type;
     }
 
-    public String getAge() {
-        return Age;
-    }
-
-    public void setAge(String age) {
-        Age = age;
-    }
-
     public String getTaste() {
         return Taste;
     }
@@ -51,20 +39,12 @@ public class Wine {
         Taste = taste;
     }
 
-    public String getPriceRange() {
-        return priceRange;
+    public String getDescription() {
+        return Description;
     }
 
-    public void setPriceRange(String priceRange) {
-        this.priceRange = priceRange;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setDescription(String description) {
+        Description = description;
     }
 
     @Override
@@ -72,9 +52,8 @@ public class Wine {
         return "Wine{" +
                 "Name='" + Name + '\'' +
                 ", Type='" + Type + '\'' +
-                ", Age='" + Age + '\'' +
                 ", Taste='" + Taste + '\'' +
-                ", priceRange='" + priceRange + '\'' +
+                ", Description='" + Description + '\'' +
                 '}';
     }
 }
