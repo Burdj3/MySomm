@@ -118,7 +118,7 @@ public class WineDishes extends AppCompatActivity {
 
     public void openStarchWineRecommendations()
     {
-        Intent intent = new Intent(this, VegWineRecommendations.class);
+        Intent intent = new Intent(this, StarchWineRecommendations.class);
         startActivity(intent);
     }
 
