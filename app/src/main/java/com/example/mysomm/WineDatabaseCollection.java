@@ -29,6 +29,7 @@ public class WineDatabaseCollection extends AppCompatActivity {
         wineRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //dbHelper.saveToLocalDatabase("Example","White","Sweet","Work");
+        //dbHelper.deleteAllRows();
 
         adapter = new WineRecyclerViewAdapter(this);
         adapter.setWines(wines);
@@ -39,12 +40,6 @@ public class WineDatabaseCollection extends AppCompatActivity {
 
     }
 
-    /*public void fillDatabase()
-    {
-        DbHelper dbHelper = new DbHelper(this);
-
-        dbHelper.saveToLocalDatabase("Example","White","Sweet","Work");
-    }*/
 
     public void readFromLocalStorage()
     {
