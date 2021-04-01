@@ -20,6 +20,7 @@
         <activity android:name=".CheeseWineRecommendations"/>
         <activity android:name=".ShellFishWineRecommendations"/>
         <activity android:name=".CuredMeatWineRecommendations"/>
+        <activity android:name="WineDatabaseCollection"/>
         <activity android:name=".WineDishes" />
         <activity android:name=".MainActivity">
             <intent-filter>

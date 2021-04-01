@@ -28,11 +28,24 @@ public class MainActivity extends AppCompatActivity {
                 openWineDishes();
             }
         });
+
+        wineCollectionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWineCollection();
+            }
+        });
     }
 
     public void openWineDishes()
     {
         Intent intent = new Intent(this, WineDishes.class);
+        startActivity(intent);
+    }
+
+    public void openWineCollection()
+    {
+        Intent intent = new Intent(this, WineDatabaseCollection.class);
         startActivity(intent);
     }
 }

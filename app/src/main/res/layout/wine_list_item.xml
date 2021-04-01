@@ -32,16 +32,6 @@
             android:text="Wine Type"
             android:textStyle="italic" />
 
-        <!--<TextView
-            android:id="@+id/txtAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtType"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="7dp"
-            android:text="Wine Age"
-            android:textStyle="italic" />-->
-
         <TextView
             android:id="@+id/txtTaste"
             android:layout_width="wrap_content"
@@ -51,16 +41,6 @@
             android:layout_marginTop="7dp"
             android:text="Wine Taste"
             android:textStyle="italic" />
-
-        <!--<TextView
-            android:id="@+id/txtPriceRange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtTaste"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="7dp"
-            android:text="Wine Price"
-            android:textStyle="italic" />-->
 
         <TextView
             android:id="@+id/txtDescription"
@@ -73,6 +53,7 @@
             android:height="100dp"
             android:text="Description"
             android:textStyle="italic" />
+
         <!--<ImageView
             android:id="@+id/image"
             android:layout_width="150dp"
