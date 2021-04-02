@@ -5,6 +5,7 @@ public class Wine {
     private String Type;
     private String Taste;
     private String Description;
+    private String imageURL;
 
     public Wine(String name, String type, String taste, String description)
     {
@@ -12,6 +13,15 @@ public class Wine {
         this.Type = type;
         this.Taste = taste;
         this.Description = description;
+    }
+
+    public Wine(String name, String type, String taste, String description, String imageURL)
+    {
+        Name = name;
+        this.Type = type;
+        this.Taste = taste;
+        this.Description = description;
+        this.imageURL = imageURL;
     }
 
 
@@ -47,6 +57,14 @@ public class Wine {
         Description = description;
     }
 
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
     @Override
     public String toString() {
         return "Wine{" +
@@ -54,6 +72,7 @@ public class Wine {
                 ", Type='" + Type + '\'' +
                 ", Taste='" + Taste + '\'' +
                 ", Description='" + Description + '\'' +
+                ", imageURL='" + imageURL + '\'' +
                 '}';
     }
 }

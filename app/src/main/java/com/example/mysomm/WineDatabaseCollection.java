@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class WineDatabaseCollection extends AppCompatActivity {
 
     private RecyclerView wineRecyclerView;
-    WineRecyclerViewAdapter adapter;
+    WineRecyclerViewDatabaseAdapter adapter;
     ArrayList<Wine> wines = new ArrayList<>();
     DbHelper dbHelper = new DbHelper(this);
 
@@ -28,10 +28,11 @@ public class WineDatabaseCollection extends AppCompatActivity {
 
         wineRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //dbHelper.saveToLocalDatabase("Example","White","Sweet","Work");
+        //dbHelper.saveToLocalDatabase("Pacific Rim","Riesling","3","It's pretty good", "1", "White", "Oregon", "3", "10", "https://upload.wikimedia.org/wikipedia/en/c/c0/Red_Wine_Glass.jpg");
+        //dbHelper.saveToLocalDatabase("Example 2","idk","1","It's alright", "2", "Red", "Texas", "2", "20", "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2879719.jpg");
         //dbHelper.deleteAllRows();
 
-        adapter = new WineRecyclerViewAdapter(this);
+        adapter = new WineRecyclerViewDatabaseAdapter(this);
         adapter.setWines(wines);
         wineRecyclerView.setAdapter(adapter);
 
@@ -51,10 +52,11 @@ public class WineDatabaseCollection extends AppCompatActivity {
         while (cursor.moveToNext())
         {
             String name = cursor.getString(cursor.getColumnIndex(helper.NAME));
-            String type = cursor.getString(cursor.getColumnIndex(helper.TYPE));
-            String taste = cursor.getString(cursor.getColumnIndex(helper.TASTE));
+            String color = cursor.getString(cursor.getColumnIndex(helper.COLOR));
+            String sweet = cursor.getString(cursor.getColumnIndex(helper.SWEET));
             String desc = cursor.getString(cursor.getColumnIndex(helper.DESCRIPTION));
-            wines.add(new Wine(name, type, taste, desc));
+            String image = cursor.getString(cursor.getColumnIndex(helper.IMAGEURL));
+            wines.add(new Wine(name, color, sweet, desc, image));
         }
         adapter.notifyDataSetChanged();
         cursor.close();
