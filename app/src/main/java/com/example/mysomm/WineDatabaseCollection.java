@@ -47,8 +47,8 @@ public class WineDatabaseCollection extends AppCompatActivity {
         while (cursor.moveToNext())
         {
             String name = cursor.getString(cursor.getColumnIndex(helper.NAME));
-            String color = cursor.getString(cursor.getColumnIndex(helper.COLOR));
-            String sweet = cursor.getString(cursor.getColumnIndex(helper.SWEET));
+            String color = cursor.getString(cursor.getColumnIndex(helper.TYPE));
+            String sweet = cursor.getString(cursor.getColumnIndex(helper.REGION));
             String desc = cursor.getString(cursor.getColumnIndex(helper.DESCRIPTION));
             String image = cursor.getString(cursor.getColumnIndex(helper.IMAGEURL));
             wines.add(new Wine(name, color, sweet, desc, image));
