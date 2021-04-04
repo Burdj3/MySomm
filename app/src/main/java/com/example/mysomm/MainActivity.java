@@ -39,7 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 openWineCollection();
             }
         });
-    }
+
+        wineSurveyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWineSurvery();
+            }
+        });
+        }
 
     public void fillDatabase()
     {
@@ -60,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
     public void openWineCollection()
     {
         Intent intent = new Intent(this, WineDatabaseCollection.class);
+        startActivity(intent);
+    }
+
+    public void openWineSurvery()
+    {
+        Intent intent = new Intent(this, Wine_Survey.class);
         startActivity(intent);
     }
 }
