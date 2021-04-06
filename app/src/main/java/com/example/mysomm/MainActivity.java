@@ -39,7 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 openWineCollection();
             }
         });
-    }
+
+        wineSurveyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWineSurvery();
+            }
+        });
+        }
 
     public void fillDatabase()
     {
@@ -49,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Hunt and Harvest Merlot","Merlot","1","The wine has lifted aromatics of red plum, dark cherry, and dusty milk chocolate. The fruit on the palate is bright with satsuma plum and red berries. The finish has touches of bitter dark chocolate.", "3", "White", "Napa Valley, California", "1", "25", "https://images.vivino.com/thumbs/uvX4ikh7QWqoRNHFbLJERA_pb_x600.png");
         dbHelper.saveToLocalDatabase("F Bomb","Red Blend","2","Juicy aromas of strawberry jam, raspberry, and red plum jump out of the glass, with a light framing of toasty vanilla oak.", "3", "Red", "Santa Barbara County, California", "2", "20", "https://images.vivino.com/thumbs/3AR_6eNgSRyJhtu2tvrbAA_pb_x960.png");
         dbHelper.saveToLocalDatabase("Lindeman's Bin 45 Cabernet","Cabernet Sauvignon","1","You can't go wrong with an affordable wine sporting deep color, good tannin structure, moderate acidity and aromas of blackcurrant, tomato leaf, dark spices and cedarwood.", "3", "Red", "Australia", "2", "7", "https://images.vivino.com/thumbs/YIaCtGWfSpOOQ-ZP9AmlOg_pb_x600.png");
+
+        dbHelper.saveToLocalDatabase("Spier","Chenin Blanc","3","South Africa- Elegant, refreshing and well balanced, displaying aromas that are fresh and fragrant. Filled with tropical fruit, peach and mineral flavors graced with a touch of vanilla on the dry finish.","5","White","South Africa","8","10","https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/ha1/h05/10272950124574.png");
+        dbHelper.saveToLocalDatabase("Georgian Legend","Rkatsiteli","8","The typical Rkatsiteli wine is best described as restrained and refreshing, with crisp green-apple flavors and hints of quince and white peach.","2","White","Georgia","9","20","https://www.bermansfinewines.com/images/sites/bermansfinewines/labels/georgian-legend-rkatsiteli_1.jpg");
+        dbHelper.saveToLocalDatabase("Sierra Vista","Barbera","3","Wonderful aromas of cherry, strawberry and blackberry complimented by notes of dried lavender and baking spices from the oak.","8","Red","Italy","10","35","https://www.sierravistawinery.com/wp-content/uploads/2019/11/FINAL-Barbera-1.2.jpg");
+        dbHelper.saveToLocalDatabase("Ring David","Concord","5","The Concord wine is juicy and sweet, with an intense grape jam flavor and light finish.","8","Red","Massachusetts","5","15","https://www.kosherwine.com/media/catalog/product/cache/a4b4b513774f9733fa68038d5e7329c4/c/a/carmel-king-david-concord-15522-base-5310a9985e214b8c6cca59f289e5b3499ead252d.jpg");
+        dbHelper.saveToLocalDatabase("Grand Tokai","Muscat","5","Muscat Blanc shows a range of citrus, floral and spice aromas, with a full, dry palate. Sparkling and slightly sparkling examples are typically sweeter and tend towards melon flavors, with sweet, grapey smells.","2","White","Greece","8","17","https://www.eurowinesandspirits.com.au/926-thickbox_default/muscat-blanc-2015-grand-tokaj.jpg");
     }
 
     public void openWineDishes()
@@ -60,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
     public void openWineCollection()
     {
         Intent intent = new Intent(this, WineDatabaseCollection.class);
+        startActivity(intent);
+    }
+
+    public void openWineSurvery()
+    {
+        Intent intent = new Intent(this, Wine_Survey.class);
         startActivity(intent);
     }
 }
