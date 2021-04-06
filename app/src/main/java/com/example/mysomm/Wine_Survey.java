@@ -3,6 +3,7 @@ package com.example.mysomm;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,23 +17,28 @@ public class Wine_Survey extends AppCompatActivity {
 
     private RadioGroup radioSweetGroup;
     private RadioButton radioSweetButton;
-    private int Sweet;
+    private String Sweet;
+    public static final String EXTRA_SWEET = "com.example.application.mysomm.EXTRA_SWEET";
 
     private RadioGroup radioPriceGroup;
     private RadioButton radioPriceButton;
-    private int Price;
+    private String Price;
+    public static final String EXTRA_PRICE = "com.example.application.mysomm.EXTRA_PRICE";
 
     private RadioGroup radioAcidGroup;
     private RadioButton radioAcidButton;
-    private int Acid;
+    private String Acid;
+    public static final String EXTRA_ACID = "com.example.application.mysomm.EXTRA_ACID";
 
     private RadioGroup radioColorGroup;
     private RadioButton radioColorButton;
     private String Color;
+    public static final String EXTRA_COLOR = "com.example.application.mysomm.EXTRA_COLOR";
 
     private RadioGroup radioBodyGroup;
     private RadioButton radioBodyButton;
-    private int Body;
+    private String Body;
+    public static final String EXTRA_BODY = "com.example.application.mysomm.EXTRA_BODY";
 
     private Button submitButton;
 
@@ -52,28 +58,23 @@ public class Wine_Survey extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 int sweetSelectedID = radioSweetGroup.getCheckedRadioButtonId();
                 radioSweetButton = findViewById(sweetSelectedID);
                 String sweetText = radioSweetButton.getText().toString();
-                //Toast.makeText(v.getContext(), text, Toast.LENGTH_SHORT).show();
 
                 if (sweetText.matches("Dry"))
                 {
-                    Sweet = 1;
-                    Toast.makeText(v.getContext(), "Dry was picked", Toast.LENGTH_SHORT).show();
+                    Sweet = "1";
                 }
 
                 else if (sweetText.matches("Between"))
                 {
-                    Sweet = 2;
-                    Toast.makeText(v.getContext(), "Between was picked", Toast.LENGTH_SHORT).show();
+                    Sweet = "2";
                 }
 
                 else if (sweetText.matches("Sweet"))
                 {
-                    Sweet = 3;
-                    Toast.makeText(v.getContext(), "Sweet was picked", Toast.LENGTH_SHORT).show();
+                    Sweet = "3";
                 }
 
                 else if (sweetText.matches("Don't Care"))
@@ -88,12 +89,12 @@ public class Wine_Survey extends AppCompatActivity {
 
                 if (priceText.matches("$10"))
                 {
-                    Price = 10;
+                    Price = "10";
                 }
 
                 else if (priceText.matches("$50"))
                 {
-                    Price = 50;
+                    Price = "50";
                 }
 
                 else if (priceText.matches("Any"))
@@ -107,22 +108,22 @@ public class Wine_Survey extends AppCompatActivity {
 
                 if (acidText.matches("Not"))
                 {
-                    Price = 1;
+                    Acid = "1";
                 }
 
                 else if (acidText.matches("Somewhat"))
                 {
-                    Price = 2;
+                    Acid = "2";
                 }
 
                 else if (acidText.matches("Very"))
                 {
-                    Price = 3;
+                    Acid = "3";
                 }
 
                 else if (acidText.matches("Don't Care"))
                 {
-                    //Price = 0;
+                    //Acid = 0;
                 }
 
                 int colorSelectedID = radioColorGroup.getCheckedRadioButtonId();
@@ -141,7 +142,7 @@ public class Wine_Survey extends AppCompatActivity {
 
                 else if (colorText.matches("Either"))
                 {
-                    //Color = ""
+                    //Color = "Either"
                 }
 
                 int bodySelectedID = radioBodyGroup.getCheckedRadioButtonId();
@@ -150,27 +151,38 @@ public class Wine_Survey extends AppCompatActivity {
 
                 if (bodyText.matches("Light"))
                 {
-                    Body = 1;
+                    Body = "1";
                 }
 
                 else if (bodyText.matches("Medium"))
                 {
-                    Body = 2;
+                    Body = "2";
                 }
 
                 else if (bodyText.matches("Heavy"))
                 {
-                    Body = 3;
+                    Body = "3";
                 }
 
                 else if (bodyText.matches("Don't Care"))
                 {
                     //Price = 0;
                 }
-
+                openWineSurveyResults();
             }
         });
     }
 
+    public void openWineSurveyResults()
+    {
+
+        Intent intent = new Intent(this, WineSurveyResults.class);
+        intent.putExtra(EXTRA_SWEET, Sweet);
+        intent.putExtra(EXTRA_PRICE, Price);
+        intent.putExtra(EXTRA_ACID, Acid);
+        intent.putExtra(EXTRA_COLOR, Color);
+        intent.putExtra(EXTRA_BODY, Body);
+        startActivity(intent);
+    }
 
 }

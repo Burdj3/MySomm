@@ -74,6 +74,14 @@ public class DbHelper extends SQLiteOpenHelper {
         return res;
     }
 
+    public Cursor readFromFilteredLocalDatabase(String swt, String prce, String acd, String clr, String bdy)
+    {
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor res = database.rawQuery("select * from winesdb where SWEET = '"+swt+"' and PRICE = '"+prce+"' and ACIDITY = '"+acd+"' and COLOR = '"+clr+"' and BODY = '"+bdy+"'", null);
+        return res;
+    }
+
     public Integer deleteRow(String id)
     {
         SQLiteDatabase db = this.getWritableDatabase();
