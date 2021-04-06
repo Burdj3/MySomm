@@ -11,15 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MySomm">
-        <activity android:name=".ChickenWineRecommendations"></activity>
-        <activity android:name=".BeefWineRecommendations"/>
-        <activity android:name=".FishWineRecommendations"/>
-        <activity android:name=".StarchWineRecommendations"/>
-        <activity android:name=".VegWineRecommendations"/>
-        <activity android:name=".DessertWineRecommendations"/>
-        <activity android:name=".CheeseWineRecommendations"/>
-        <activity android:name=".ShellFishWineRecommendations"/>
-        <activity android:name=".CuredMeatWineRecommendations"/>
+        <activity android:name=".Wine_Survey"></activity>
+        <activity android:name=".ChickenWineRecommendations" />
+        <activity android:name=".BeefWineRecommendations" />
+        <activity android:name=".FishWineRecommendations" />
+        <activity android:name=".StarchWineRecommendations" />
+        <activity android:name=".VegWineRecommendations" />
+        <activity android:name=".DessertWineRecommendations" />
+        <activity android:name=".CheeseWineRecommendations" />
+        <activity android:name=".ShellFishWineRecommendations" />
+        <activity android:name=".CuredMeatWineRecommendations" />
+        <activity android:name=".WineDatabaseCollection" />
         <activity android:name=".WineDishes" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -10,7 +10,7 @@
     app:cardElevation="10dp">
 
     <RelativeLayout
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -49,19 +49,18 @@
             android:layout_below="@id/txtTaste"
             android:layout_marginStart="5dp"
             android:layout_marginTop="7dp"
-            android:width="300dp"
+            android:width="250dp"
             android:height="100dp"
             android:text="Description"
             android:textStyle="italic" />
 
-        <!--<ImageView
+        <ImageView
             android:id="@+id/image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_below="@id/txtPriceRange"
+            android:layout_width="135dp"
+            android:layout_height="185dp"
+            android:layout_toRightOf="@id/txtDescription"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="22dp"
-            android:src="@drawable/ic_launcher_background" />-->
+            android:src="@drawable/ic_launcher_background" />
     </RelativeLayout>
 
 
