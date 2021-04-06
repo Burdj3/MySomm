@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wine"
+    tools:context=".Wine_Survey">
+
+    <TextView
+        android:id="@+id/Sweetness"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:text="Do you prefer sweet or dry wine?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_marginTop="100dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgSweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/Sweetness"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb1Dry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dry"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb1Middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Between"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb1Sweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sweet"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb1NA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't Care"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Price"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:text="How much are you willing to spend on a bottle of wine?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_below="@id/rgSweet"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/Price"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb2Cheap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb2Middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$50"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb2NA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Acid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:text="How tart do you like your wine?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_below="@id/rgPrice"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgAcid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/Acid"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb3Soft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb3Middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Somewhat"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb3Acidic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Very"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb3NA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't Care"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Color"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:text="What color wine you you prefer?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_below="@id/rgAcid"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/Color"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb4White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb4Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb4NA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Either"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:text="How heavy would you like a wine?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_below="@id/rgColor"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/Body"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb5Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb5Middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb5Heavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heavy"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb5NA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't Care"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+
+</RelativeLayout>

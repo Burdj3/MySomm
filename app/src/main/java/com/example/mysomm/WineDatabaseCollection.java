@@ -15,7 +15,6 @@ public class WineDatabaseCollection extends AppCompatActivity {
     private RecyclerView wineRecyclerView;
     WineRecyclerViewDatabaseAdapter adapter;
     ArrayList<Wine> wines = new ArrayList<>();
-    DbHelper dbHelper = new DbHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +26,6 @@ public class WineDatabaseCollection extends AppCompatActivity {
         wineRecyclerView = findViewById(R.id.wineDatabaseCollectionRecyclerView);
 
         wineRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        //dbHelper.saveToLocalDatabase("Pacific Rim","Riesling","3","It's pretty good", "1", "White", "Oregon", "3", "10", "https://upload.wikimedia.org/wikipedia/en/c/c0/Red_Wine_Glass.jpg");
-        //dbHelper.saveToLocalDatabase("Example 2","idk","1","It's alright", "2", "Red", "Texas", "2", "20", "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2879719.jpg");
-        //dbHelper.deleteAllRows();
 
         adapter = new WineRecyclerViewDatabaseAdapter(this);
         adapter.setWines(wines);
@@ -52,8 +47,8 @@ public class WineDatabaseCollection extends AppCompatActivity {
         while (cursor.moveToNext())
         {
             String name = cursor.getString(cursor.getColumnIndex(helper.NAME));
-            String color = cursor.getString(cursor.getColumnIndex(helper.COLOR));
-            String sweet = cursor.getString(cursor.getColumnIndex(helper.SWEET));
+            String color = cursor.getString(cursor.getColumnIndex(helper.TYPE));
+            String sweet = cursor.getString(cursor.getColumnIndex(helper.REGION));
             String desc = cursor.getString(cursor.getColumnIndex(helper.DESCRIPTION));
             String image = cursor.getString(cursor.getColumnIndex(helper.IMAGEURL));
             wines.add(new Wine(name, color, sweet, desc, image));
