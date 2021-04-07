@@ -78,8 +78,11 @@ public class DbHelper extends SQLiteOpenHelper {
     {
 
         SQLiteDatabase database = this.getWritableDatabase();
+
         Cursor res = database.rawQuery("select * from winesdb where SWEET = '"+swt+"' and PRICE = '"+prce+"' and ACIDITY = '"+acd+"' and COLOR = '"+clr+"' and BODY = '"+bdy+"'", null);
         return res;
+
+
     }
 
     public Integer deleteRow(String id)

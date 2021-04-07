@@ -37,6 +37,7 @@ public class WineSurveyResults extends AppCompatActivity {
         adapter = new WineRecyclerViewDatabaseAdapter(this);
         adapter.setWines(wines);
         wineRecyclerView.setAdapter(adapter);
+
         readFromFilteredLocalStorage(Sweet, Price, Acid, Color, Body);
 
     }
