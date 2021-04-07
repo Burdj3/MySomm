@@ -60,6 +60,7 @@ public class Wine_Survey extends AppCompatActivity {
                 radioSweetButton = findViewById(sweetSelectedID);
                 String sweetText = radioSweetButton.getText().toString();
 
+
                 int priceSelectedID = radioPriceGroup.getCheckedRadioButtonId();
                 radioPriceButton = findViewById(priceSelectedID);
                 String priceText = radioPriceButton.getText().toString();
