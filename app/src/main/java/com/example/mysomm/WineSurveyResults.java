@@ -47,7 +47,7 @@ public class WineSurveyResults extends AppCompatActivity {
         wines.clear();
         DbHelper helper = new DbHelper(this);
 
-        Cursor cursor = helper.readFromFilteredLocalDatabase(swt, prce, acd, clr, bdy);
+        Cursor cursor = helper.readFromFilteredLocalDatabase2(swt, prce, acd, clr, bdy);
 
         while (cursor.moveToNext())
         {
