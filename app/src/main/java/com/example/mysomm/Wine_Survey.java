@@ -55,33 +55,44 @@ public class Wine_Survey extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 int sweetSelectedID = radioSweetGroup.getCheckedRadioButtonId();
-                radioSweetButton = findViewById(sweetSelectedID);
-                String sweetText = radioSweetButton.getText().toString();
-
-
                 int priceSelectedID = radioPriceGroup.getCheckedRadioButtonId();
-                radioPriceButton = findViewById(priceSelectedID);
-                String priceText = radioPriceButton.getText().toString();
-
-
                 int acidSelectedID = radioAcidGroup.getCheckedRadioButtonId();
-                radioAcidButton = findViewById(acidSelectedID);
-                String acidText = radioAcidButton.getText().toString();
-
-
                 int colorSelectedID = radioColorGroup.getCheckedRadioButtonId();
-                radioColorButton = findViewById(colorSelectedID);
-                String colorText = radioColorButton.getText().toString();
-
-
                 int bodySelectedID = radioBodyGroup.getCheckedRadioButtonId();
-                radioBodyButton = findViewById(bodySelectedID);
-                String bodyText = radioBodyButton.getText().toString();
+
+                if (sweetSelectedID == -1 || priceSelectedID == -1 || acidSelectedID == -1 || colorSelectedID == -1 || bodySelectedID == -1)
+                {
+                    Toast.makeText(Wine_Survey.this, "Please answer all questions!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    {
+                        radioSweetButton = findViewById(sweetSelectedID);
+                        String sweetText = radioSweetButton.getText().toString();
 
 
-                openWineSurveyResults(sweetText,priceText,acidText,colorText,bodyText);
+
+                        radioPriceButton = findViewById(priceSelectedID);
+                        String priceText = radioPriceButton.getText().toString();
+
+
+
+                        radioAcidButton = findViewById(acidSelectedID);
+                        String acidText = radioAcidButton.getText().toString();
+
+
+
+                        radioColorButton = findViewById(colorSelectedID);
+                        String colorText = radioColorButton.getText().toString();
+
+
+
+                        radioBodyButton = findViewById(bodySelectedID);
+                        String bodyText = radioBodyButton.getText().toString();
+
+                        openWineSurveyResults(sweetText,priceText,acidText,colorText,bodyText);
+                    }
+
             }
         });
     }
