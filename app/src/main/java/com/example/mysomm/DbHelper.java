@@ -104,7 +104,7 @@ public class DbHelper extends SQLiteOpenHelper {
             Cursor res27 = database.rawQuery("select * from winesdb where (SWEET = 'Dry' or SWEET = 'Between' or SWEET = 'Sweet') and (PRICE = 'Less than $20' or PRICE = 'Greater than $20') and ACIDITY = '"+acd+"' and (COLOR = 'White' or COLOR = 'Red') and (BODY = 'Light' or BODY = 'Medium' or BODY = 'Heavy')", null);
             return res27;
         }
-        if (swt.matches("Don't Care") && acd.matches("Don't Care") && prce.matches("Any") && bdy.matches("Don't Care")) /////////
+        if (swt.matches("Don't Care") && acd.matches("Don't Care") && prce.matches("Any") && bdy.matches("Don't Care"))
         {
             Cursor res28 = database.rawQuery("select * from winesdb where (SWEET = 'Dry' or SWEET = 'Between' or SWEET = 'Sweet') and (PRICE = 'Less than $20' or PRICE = 'Greater than $20') and (ACIDITY = 'Not Very' or ACIDITY = 'Somewhat' or ACIDITY = 'Very') and COLOR = '"+clr+"' and (BODY = 'Light' or BODY = 'Medium' or BODY = 'Heavy')", null);
             return res28;
@@ -143,6 +143,16 @@ public class DbHelper extends SQLiteOpenHelper {
         {
             Cursor res23 = database.rawQuery("select * from winesdb where SWEET = '"+swt+"' and (PRICE = 'Less than $20' or PRICE = 'Greater than $20') and (ACIDITY = 'Not Very' or ACIDITY = 'Somewhat' or ACIDITY = 'Very') and COLOR = '"+clr+"' and (BODY = 'Light' or BODY = 'Medium' or BODY = 'Heavy')", null);
             return res23;
+        }
+        if (bdy.matches("Don't Care") && acd.matches("Don't Care") && swt.matches("Don't Care"))
+        {
+            Cursor res30 = database.rawQuery("select * from winesdb where (SWEET = 'Dry' or SWEET = 'Between' or SWEET = 'Sweet') and PRICE = '"+prce+"' and (ACIDITY = 'Not Very' or ACIDITY = 'Somewhat' or ACIDITY = 'Very') and COLOR = '"+clr+"' and (BODY = 'Light' or BODY = 'Medium' or BODY = 'Heavy')", null);
+            return res30;
+        }
+        if (swt.matches("Don't Care") && bdy.matches("Don't Care") && prce.matches("Any"))
+        {
+            Cursor res31 = database.rawQuery("select * from winesdb where (SWEET = 'Dry' or SWEET = 'Between' or SWEET = 'Sweet') and (PRICE = 'Less than $20' or PRICE = 'Greater than $20') and ACIDITY = '"+acd+"' and COLOR = '"+clr+"' and BODY = (BODY = 'Light' or BODY = 'Medium' or BODY = 'Heavy')", null);
+            return res31;
         }
         if (bdy.matches("Don't Care") && clr.matches("Either"))
         {
