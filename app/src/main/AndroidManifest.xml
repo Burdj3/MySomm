@@ -23,6 +23,8 @@
         <activity android:name=".CuredMeatWineRecommendations" />
         <activity android:name=".WineDatabaseCollection" />
         <activity android:name=".WineDishes" />
+        <activity android:name=".WineSurveyResults"
+            android:parentActivityName=".Wine_Survey"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
