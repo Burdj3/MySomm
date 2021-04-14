@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Louis Bouillot Perle D’Aurore Brut Rose","Rose","Dry","A sophisticated Rose made using the Champagne method from Pinot Noir grapes.","Light","Red","Burgundy, France","Very","Less than $20","https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/h0e/h06/12262839189534.png");
         dbHelper.saveToLocalDatabase("Giribaldi Barbera D'ALBA","Barbera","Dry","The juicy palate doles out black cherry, raspberry jam, licorice and a touch of orange zest alongside bright acidity and polished tannins.","Medium","Red","Piedmont, Italy","Very","Less than $20","https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/h0d/h54/14252073615390.png");
 
-        dbHelper.saveToLocalDatabase("Gustave Lorentz","Alsace","Sweet","With this much spicy character and steely acidity can rarely be found for under $50.","Heavy","White","","Somewhat","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2021/02/2019_Gustave_Lorentz_Gewurztraminer_Reserve_Alsace_Bottleshot_compressed.png");
+        dbHelper.saveToLocalDatabase("Gustave Lorentz","Alsace","Sweet","With this much spicy character and steely acidity can rarely be found for under $50.","Heavy","White","France","Somewhat","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2021/02/2019_Gustave_Lorentz_Gewurztraminer_Reserve_Alsace_Bottleshot_compressed.png");
 
 
 
