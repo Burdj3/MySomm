@@ -1,5 +1,7 @@
 package com.example.mysomm;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,9 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FishWineRecommendations extends AppCompatActivity {
+public class FishWineRecommendations extends AppCompatActivity implements WineRecyclerViewAdapter.OnWineListener {
 
     private RecyclerView wineRecyclerView;
+    ArrayList<Wine> wines = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +22,24 @@ public class FishWineRecommendations extends AppCompatActivity {
 
         wineRecyclerView = findViewById(R.id.fishWineDishRecyclerView);
 
-        ArrayList<Wine> wines = new ArrayList<>();
+
         wines.add(new Wine("Pinos Grigio", "Type: White", "Taste: Dry", "Pinoss Grigio is most commonly described as dry white wines with relatively high acidity. These characteristics are complemented by aromas of lemon, lime, green apple and blossoms."));
         wines.add(new Wine("Roussanne", "Type: White", "Taste: Dry", "The aroma of Roussanne is often reminiscent of a flowery herbal tea. In warm climates, it produces wines of richness, with flavors of honey and pear, and full body."));
         wines.add(new Wine("Champagne", "Type: Sparkling", "Taste: Sweet", "Champagne wines are so subtly aromatic that the effervescence may mask their delicate bouquet."));
         wines.add(new Wine("Cava", "Type: Sparkling", "Taste: Dry", "You'll be surprised to know that Cava is far closer to Champagne (in terms of taste) than Prosecco. If you're looking for value bubbly, Cava might be your bag."));
 
-        WineRecyclerViewAdapter adapter = new WineRecyclerViewAdapter(this);
+        WineRecyclerViewAdapter adapter = new WineRecyclerViewAdapter(this, this);
         adapter.setWines(wines);
 
         wineRecyclerView.setAdapter(adapter);
         wineRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public void onWineClick(int position) {
+        //where you navigate to new activity
+        String myLink = wines.get(position).getLink();
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(myLink)));
     }
 }
 

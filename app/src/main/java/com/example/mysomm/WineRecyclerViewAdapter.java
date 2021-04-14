@@ -20,17 +20,20 @@ import java.util.ArrayList;
 public class WineRecyclerViewAdapter extends RecyclerView.Adapter<WineRecyclerViewAdapter.ViewHolder>{
 
     private ArrayList<Wine> wines = new ArrayList<>();
+    private OnWineListener mOnWineListener;
+
     private Context context;
 
-    public WineRecyclerViewAdapter(Context context) {
+    public WineRecyclerViewAdapter(Context context, OnWineListener onWineListener) {
         this.context = context;
+        this.mOnWineListener = onWineListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wine_list_item, parent, false);
-        ViewHolder holder = new ViewHolder((view));
+        ViewHolder holder = new ViewHolder(view, mOnWineListener);
         return holder;
     }
 
@@ -54,17 +57,30 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter<WineRecyclerVi
         this.wines = wines;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView txtWine, txtType, txtTaste, txtDescription;
+        OnWineListener onWineListener;
         private CardView parent;
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, OnWineListener onWineListener) {
             super(itemView);
             txtWine = itemView.findViewById(R.id.txtWine);
             txtType = itemView.findViewById(R.id.txtType);
             txtTaste = itemView.findViewById(R.id.txtTaste);
             txtDescription = itemView.findViewById(R.id.txtDescription);
+            this.onWineListener = onWineListener;
+
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            onWineListener.onWineClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnWineListener{
+        void onWineClick(int position);
     }
 
 
