@@ -1,13 +1,13 @@
 package com.example.mysomm;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class HomePage extends AppCompatActivity {
 
     private Button wineDishButton;
     private Button wineCollectionButton;
@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Regis Bouvier En Montre Cul","Pinot Noir","Dry","Pale ruby in color. The wine presents a classic nose of fresh cherry and strawberry, violets, forest floor, licorice, and cedar.","Light","Red","France","Very","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2021/04/bouvier-montrecul_Bottleshot_compressed.png");
         dbHelper.saveToLocalDatabase("Castello di Verduno Barbaresco","Nebbiolo","Dry","Pouring a clear and bright pale garnet in color. Opens to reveal delicate notions of wild strawberry and raspberry, rose petal, leather, cedar, coriander, anise, and exotic spice.","Medium","Red","Italy","Very","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2020/09/verduno-barbaresco-nv_Bottleshot_compressed.png");
 
-
-
         dbHelper.saveToLocalDatabase("Chateau Ste Michelle Harvest","Riesling","Between","This sweet Riesling offers rich flavors of ripe peaches balanced with crisp Washington Riesling acidity. It's like a bowl of fruit in a glass!","Light","White","Washington","Not Very","Less than $20","https://images.vivino.com/thumbs/VvbShQz_S4Gjlc6kYNlk-g_pb_x600.png");
         dbHelper.saveToLocalDatabase("Bacalhôa Moscatel de Setúbal","Moscatel","Dry","A rich fortified wine abound with orange tree flower,raisins and a smooth, sweet yet fresh finish. This wine pairs nicely with desserts made with dark chocolate or simply as a digestive with a good coffee.","Light","Red","Portugal","Not Very","Less than $20","https://images.vivino.com/thumbs/HcwOStCNRiK-yeDzXkC_Yw_pb_x600.png");
         dbHelper.saveToLocalDatabase("Cascinetta Vietti Moscato D'Asti","Moscato","Dry","This Moscato d’Asti has intense aromas of peaches, rose petals and ginger. It is delicately sweet and sparkling with balanced acidity, good complexity and a finish of fresh apricots.","Light","White","Italy","Not Very","Less than $20","https://images.vivino.com/thumbs/oFLBf2lSTiqefNRdHShgog_pb_x600.png");
@@ -101,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Le Haut-Médoc de Pédesclaux","Cabernet Sauvignon","Sweet","Medium-bodied, it shows pleasantly crunchy tannins and a beautifully lifted frame that showcase flavors of black raspberry, wild herbs, spice box, and cedar.","Medium","Red","France","Very","Greater than $20","https://images.vivino.com/thumbs/4Qc2T4bJRwmauc6URgYtZQ_pb_x600.png");
         dbHelper.saveToLocalDatabase("Blackbird Vineyards Arise Red","Cabernet Sauvignon","Sweet","Adorned with raspberry, black plum, freshly roasted espresso, and spice, it boasts broad shoulders and finesse. It’s  an instantly satisfying Bordeaux blend.","Heavy","Red","California","Very","Greater than $20","https://images.vivino.com/thumbs/K2qCNGTRRQGr68n7yV7pcQ_pb_x600.png");
 
-        //Jonatan B
         dbHelper.saveToLocalDatabase("Domaine Grand Veneur","Les Champions","Between","The red wines can be fruity, sweet, spicy and packed with ripe, red berries. The wines can be sweet, fruity and easy to drink.","Heavy","Red","France","Not Very","Greater than $20","https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hf5/hcd/8815668854814.png");
         dbHelper.saveToLocalDatabase("Chateau D'Esclans","Blush Rose","Dry","This is full of mouthwatering flavor with a lovely texture. Lots of light fruit flavors with a clean finish, this wine does well to demonstrate the power of its grape.","Medium","White","France","Not Very","Greater than $20","https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/ha9/hbf/12357383290910.png");
         dbHelper.saveToLocalDatabase("Valserrano Rioja Reserva","Tempranillo","Dry","An elegant , savoury cuvee of Tempranillo and 10% Graciano with savoury tannins and fine, graceful, red berry and fresh herb notes.","Heavy","Red","Spain","Not Very","Greater than $20","https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hec/h42/10069521858590.png");
@@ -185,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Giribaldi Barbera D'ALBA","Barbera","Dry","The juicy palate doles out black cherry, raspberry jam, licorice and a touch of orange zest alongside bright acidity and polished tannins.","Medium","Red","Piedmont, Italy","Very","Less than $20","https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/h0d/h54/14252073615390.png");
 
         dbHelper.saveToLocalDatabase("Gustave Lorentz","Alsace","Sweet","With this much spicy character and steely acidity can rarely be found for under $50.","Heavy","White","France","Somewhat","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2021/02/2019_Gustave_Lorentz_Gewurztraminer_Reserve_Alsace_Bottleshot_compressed.png");
-
 
 
     }

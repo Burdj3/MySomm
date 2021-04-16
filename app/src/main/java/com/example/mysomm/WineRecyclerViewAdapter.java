@@ -41,7 +41,6 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter<WineRecyclerVi
         holder.txtTaste.setText(wines.get(position).getTaste());
         holder.txtDescription.setText(wines.get(position).getDescription());
 
-
     }
 
     @Override

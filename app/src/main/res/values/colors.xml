@@ -13,4 +13,30 @@
     <color name="olive">#767840</color>
     <color name="olive_dark">#444812</color>
     <color name="wine_dark">#2A0010</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparentWhite">#CCCCCC</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="purple">#ac3ef9</color>
+    <color name="blackTxt">#0d0e15</color>
+    <color name="grayTxt">#8c8c8c</color>
+    <color name="light_gray40">#8d95989a</color>
+    <color name="fav">#fe2042</color>
+    <color name="txt_color">#1f2833</color>
+    <color name="active_color">#dd3e3e</color>
+    <color name="inactive_color">#a0a0a0</color>
+    <color name="myfav">#007aff</color>
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <!-- colors for button style -->
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
 </resources>
