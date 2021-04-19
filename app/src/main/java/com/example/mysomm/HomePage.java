@@ -26,7 +26,7 @@ public class HomePage extends AppCompatActivity {
         wineDishButton = findViewById(R.id.wineDishButton);
         wineCollectionButton = findViewById(R.id.wineCollectionButton);
         wineSurveyButton = findViewById(R.id.wineSurveyButton);
-        singOut = findViewById(R.id.btnSingOut);
+        singOut = findViewById(R.id.btnSignOut);
         help = findViewById(R.id.btnHelp);
 
         fillDatabase();
