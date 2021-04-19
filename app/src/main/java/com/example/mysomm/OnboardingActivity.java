@@ -33,7 +33,6 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
 
-    // Listener for next button press
     public void nextPage(View view) {
         if (view.getId() == R.id.button2) {
             if (viewPager.getCurrentItem() < onboardingAdapter.getCount() - 1) {
