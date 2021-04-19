@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +13,8 @@ public class HomePage extends AppCompatActivity {
     private Button wineDishButton;
     private Button wineCollectionButton;
     private Button wineSurveyButton;
+    private Button singOut;
+    private Button help;
 
     DbHelper dbHelper = new DbHelper(this);
 
@@ -23,6 +26,8 @@ public class HomePage extends AppCompatActivity {
         wineDishButton = findViewById(R.id.wineDishButton);
         wineCollectionButton = findViewById(R.id.wineCollectionButton);
         wineSurveyButton = findViewById(R.id.wineSurveyButton);
+        singOut = findViewById(R.id.btnSingOut);
+        help = findViewById(R.id.btnHelp);
 
         fillDatabase();
 
@@ -40,13 +45,35 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+
+
+
         wineSurveyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openWineSurvery();
             }
         });
+
+        singOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openProfileSetUp();
+            }
+        });
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openOnboardingAHelp();
+            }
+        });
+
+
+
         }
+
+
 
     public void fillDatabase()
     {
@@ -205,4 +232,19 @@ public class HomePage extends AppCompatActivity {
         Intent intent = new Intent(this, Wine_Survey.class);
         startActivity(intent);
     }
+
+    public void openProfileSetUp()
+    {
+        Toast.makeText(this, "You are signed out!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ProfileSetUp.class);
+        startActivity(intent);
+    }
+
+    public void openOnboardingAHelp()
+    {
+        Intent intent = new Intent(this, OnboardingActivityHelp.class);
+        startActivity(intent);
+    }
+
+
 }

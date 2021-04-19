@@ -36,7 +36,7 @@ public class SignUp extends AppCompatActivity {
                 boolean var = myDB.registerUser(usernameSignUp.getText().toString() , emailSignUp.getText().toString() , passwordSignUp.getText().toString());
                 if(var){
                     Toast.makeText(com.example.mysomm.SignUp.this, "User Registered Successfully !!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(com.example.mysomm.SignUp.this , ProfileSetUp.class));
+                    startActivity(new Intent(com.example.mysomm.SignUp.this , OnboardingActivity.class));
                     finish();
                 }
                 else {

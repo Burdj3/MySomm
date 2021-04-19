@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySomm">
         <activity android:name=".Wine_Survey"></activity>
+        <activity android:name=".OnboardingActivity" />
+        <activity android:name=".OnboardingActivityHelp" />
         <activity android:name=".ChickenWineRecommendations" />
         <activity android:name=".BeefWineRecommendations" />
         <activity android:name=".FishWineRecommendations" />
