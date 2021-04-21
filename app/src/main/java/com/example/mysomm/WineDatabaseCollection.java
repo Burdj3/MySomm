@@ -1,7 +1,9 @@
 package com.example.mysomm;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class WineDatabaseCollection extends AppCompatActivity {
+public class WineDatabaseCollection extends AppCompatActivity implements WineRecyclerViewDatabaseAdapter.OnWinedbListener {
 
     private RecyclerView wineRecyclerView;
     WineRecyclerViewDatabaseAdapter adapter;
@@ -27,7 +29,7 @@ public class WineDatabaseCollection extends AppCompatActivity {
 
         wineRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new WineRecyclerViewDatabaseAdapter(this);
+        adapter = new WineRecyclerViewDatabaseAdapter(this, this);
         adapter.setWines(wines);
         wineRecyclerView.setAdapter(adapter);
 
@@ -56,5 +58,11 @@ public class WineDatabaseCollection extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         cursor.close();
         helper.close();
+    }
+
+    @Override
+    public void onWinedbClick(int position) {
+        String myLink = wines.get(position).getLink();
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(myLink)));
     }
 }

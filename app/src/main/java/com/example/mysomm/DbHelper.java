@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.Optional;
+
 public class DbHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "winedb";
@@ -21,9 +23,10 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String ACIDITY = "ACIDITY";
     public static final String PRICE = "PRICE";
     public static final String IMAGEURL = "IMAGEURL";
+    public static final String LINK = "LINK";
 
     private static final int DATABASE_VERSION = 6;
-    private static final String CREATE_TABLE = ("create table "+ TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, TYPE TEXT, SWEET TEXT, DESCRIPTION TEXT, BODY TEXT, COLOR TEXT, REGION TEXT, ACIDITY TEXT, PRICE TEXT, IMAGEURL TEXT)");
+    private static final String CREATE_TABLE = ("create table "+ TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, TYPE TEXT, SWEET TEXT, DESCRIPTION TEXT, BODY TEXT, COLOR TEXT, REGION TEXT, ACIDITY TEXT, PRICE TEXT, IMAGEURL TEXT, LINK TEXT)");
     private static final String DROP_TABLE = "drop table if exists "+ TABLE_NAME;
 
     public DbHelper(Context context)
@@ -44,7 +47,7 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean saveToLocalDatabase(String name, String type, String sweet, String desc, String body, String color, String region, String acidity, String price, String imageURL)
+    public boolean saveToLocalDatabase(String name, String type, String sweet, String desc, String body, String color, String region, String acidity, String price, String imageURL, String link)
     {
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -58,6 +61,7 @@ public class DbHelper extends SQLiteOpenHelper {
         contentValues.put(ACIDITY, acidity);
         contentValues.put(PRICE, price);
         contentValues.put(IMAGEURL, imageURL);
+        contentValues.put(LINK, link);
         long result = database.insert(TABLE_NAME, null, contentValues);
 
         if (result == 1)
@@ -65,6 +69,8 @@ public class DbHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+
 
     public Cursor readFromLocalDatabase()
     {

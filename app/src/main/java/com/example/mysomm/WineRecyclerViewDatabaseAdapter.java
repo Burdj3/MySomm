@@ -20,16 +20,18 @@ public class WineRecyclerViewDatabaseAdapter extends RecyclerView.Adapter<WineRe
 
     private ArrayList<Wine> wines = new ArrayList<>();
     private Context context;
+    private OnWinedbListener mOnWinedbListener;
 
-    public WineRecyclerViewDatabaseAdapter(Context context) {
+    public WineRecyclerViewDatabaseAdapter(Context context, OnWinedbListener onWinedbListener) {
         this.context = context;
+        this.mOnWinedbListener = onWinedbListener;
     }
 
     @NonNull
     @Override
     public WineRecyclerViewDatabaseAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wine_list_item_database, parent, false);
-        WineRecyclerViewDatabaseAdapter.ViewHolder holder = new WineRecyclerViewDatabaseAdapter.ViewHolder((view));
+        WineRecyclerViewDatabaseAdapter.ViewHolder holder = new WineRecyclerViewDatabaseAdapter.ViewHolder(view, mOnWinedbListener);
         return holder;
     }
 
@@ -57,19 +59,33 @@ public class WineRecyclerViewDatabaseAdapter extends RecyclerView.Adapter<WineRe
         this.wines = wines;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView txtWine, txtType, txtTaste, txtDescription;
         private ImageView image;
         private CardView parent;
-        public ViewHolder(@NonNull View itemView) {
+        OnWinedbListener onWinedbListener;
+
+        public ViewHolder(@NonNull View itemView, OnWinedbListener onWinedbListener) {
             super(itemView);
             txtWine = itemView.findViewById(R.id.txtWine);
             txtType = itemView.findViewById(R.id.txtType);
             txtTaste = itemView.findViewById(R.id.txtTaste);
             txtDescription = itemView.findViewById(R.id.txtDescription);
             image = itemView.findViewById(R.id.image);
+            this.onWinedbListener = onWinedbListener;
+
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            onWinedbListener.onWinedbClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnWinedbListener{
+        void onWinedbClick(int position);
     }
 
 
