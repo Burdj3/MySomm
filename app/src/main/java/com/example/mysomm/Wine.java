@@ -16,12 +16,13 @@ public class Wine {
         this.Description = description;
     }
 
-    public Wine(String name, String type, String taste, String description, String link)
+    public Wine(String name, String type, String taste, String description, String imageURL, String link)
     {
         Name = name;
         this.Type = type;
         this.Taste = taste;
         this.Description = description;
+        this.imageURL = imageURL;
         this.Link = link;
     }
 
@@ -81,6 +82,7 @@ public class Wine {
                 ", Type='" + Type + '\'' +
                 ", Taste='" + Taste + '\'' +
                 ", Description='" + Description + '\'' +
+                ", imageURL='" + imageURL + '\'' +
                 ", Link='" + Link + '\'' +
                 '}';
     }

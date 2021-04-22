@@ -53,7 +53,8 @@ public class WineDatabaseCollection extends AppCompatActivity implements WineRec
             String sweet = cursor.getString(cursor.getColumnIndex(helper.REGION));
             String desc = cursor.getString(cursor.getColumnIndex(helper.DESCRIPTION));
             String image = cursor.getString(cursor.getColumnIndex(helper.IMAGEURL));
-            wines.add(new Wine(name, color, sweet, desc, image));
+            String link = cursor.getString(cursor.getColumnIndex(helper.LINK));
+            wines.add(new Wine(name, color, sweet, desc, image, link));
         }
         adapter.notifyDataSetChanged();
         cursor.close();
