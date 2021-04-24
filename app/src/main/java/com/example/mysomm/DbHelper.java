@@ -22,7 +22,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String PRICE = "PRICE";
     public static final String IMAGEURL = "IMAGEURL";
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
     private static final String CREATE_TABLE = ("create table "+ TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, TYPE TEXT, SWEET TEXT, DESCRIPTION TEXT, BODY TEXT, COLOR TEXT, REGION TEXT, ACIDITY TEXT, PRICE TEXT, IMAGEURL TEXT)");
     private static final String DROP_TABLE = "drop table if exists "+ TABLE_NAME;
 
