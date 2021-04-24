@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -61,6 +62,7 @@ public class WineRecyclerViewDatabaseAdapter extends RecyclerView.Adapter<WineRe
 
         private TextView txtWine, txtType, txtTaste, txtDescription;
         private ImageView image;
+        private RatingBar RatingBar;
         private CardView parent;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +71,7 @@ public class WineRecyclerViewDatabaseAdapter extends RecyclerView.Adapter<WineRe
             txtTaste = itemView.findViewById(R.id.txtTaste);
             txtDescription = itemView.findViewById(R.id.txtDescription);
             image = itemView.findViewById(R.id.image);
+            RatingBar = itemView.findViewById(R.id.RatingBar);
         }
     }
 }
