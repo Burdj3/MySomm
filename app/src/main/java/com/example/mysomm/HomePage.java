@@ -1,17 +1,20 @@
 package com.example.mysomm;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class HomePage extends AppCompatActivity {
 
     private Button wineDishButton;
     private Button wineCollectionButton;
     private Button wineSurveyButton;
+    private Button singOut;
+    private Button help;
 
     DbHelper dbHelper = new DbHelper(this);
 
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         wineDishButton = findViewById(R.id.wineDishButton);
         wineCollectionButton = findViewById(R.id.wineCollectionButton);
         wineSurveyButton = findViewById(R.id.wineSurveyButton);
+        singOut = findViewById(R.id.btnSignOut);
+        help = findViewById(R.id.btnHelp);
 
         fillDatabase();
 
@@ -40,13 +45,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
         wineSurveyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openWineSurvery();
             }
         });
+
+        singOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openProfileSetUp();
+            }
+        });
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openOnboardingAHelp();
+            }
+        });
+
+
+
         }
+
+
 
     public void fillDatabase()
     {
@@ -75,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("M. Chapoutier Cotes du Rhone","Rhône","Dry","Shows intense aromas of blackcurrant and raspberry complemented by notes of white pepper. In the mouth, this wine is juicy, powerful, and fruity with red fruits and lovely roasted notes.","Heavy","White","France","Very","Greater than $20","https://images.vivino.com/thumbs/jchk9IVTRXmwI0DX8IwAig_pb_600x600.png");
         dbHelper.saveToLocalDatabase("Regis Bouvier En Montre Cul","Pinot Noir","Dry","Pale ruby in color. The wine presents a classic nose of fresh cherry and strawberry, violets, forest floor, licorice, and cedar.","Light","Red","France","Very","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2021/04/bouvier-montrecul_Bottleshot_compressed.png");
         dbHelper.saveToLocalDatabase("Castello di Verduno Barbaresco","Nebbiolo","Dry","Pouring a clear and bright pale garnet in color. Opens to reveal delicate notions of wild strawberry and raspberry, rose petal, leather, cedar, coriander, anise, and exotic spice.","Medium","Red","Italy","Very","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2020/09/verduno-barbaresco-nv_Bottleshot_compressed.png");
-
+        dbHelper.saveToLocalDatabase("Esprit de Fonrozay Bordeaux","Merlot","Dry","A soft ruby decorates the glass. Aromas of purple flowers are joined by wild strawberry, cinnamon, and cardamom.","Heavy","Red","France","Very","Less than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2020/12/2016_Esprit_de_Fonrozay_Bordeaux_bttl__compressed.png");
 
 
         dbHelper.saveToLocalDatabase("Chateau Ste Michelle Harvest","Riesling","Between","This sweet Riesling offers rich flavors of ripe peaches balanced with crisp Washington Riesling acidity. It's like a bowl of fruit in a glass!","Light","White","Washington","Not Very","Less than $20","https://images.vivino.com/thumbs/VvbShQz_S4Gjlc6kYNlk-g_pb_x600.png");
@@ -101,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Le Haut-Médoc de Pédesclaux","Cabernet Sauvignon","Sweet","Medium-bodied, it shows pleasantly crunchy tannins and a beautifully lifted frame that showcase flavors of black raspberry, wild herbs, spice box, and cedar.","Medium","Red","France","Very","Greater than $20","https://images.vivino.com/thumbs/4Qc2T4bJRwmauc6URgYtZQ_pb_x600.png");
         dbHelper.saveToLocalDatabase("Blackbird Vineyards Arise Red","Cabernet Sauvignon","Sweet","Adorned with raspberry, black plum, freshly roasted espresso, and spice, it boasts broad shoulders and finesse. It’s  an instantly satisfying Bordeaux blend.","Heavy","Red","California","Very","Greater than $20","https://images.vivino.com/thumbs/K2qCNGTRRQGr68n7yV7pcQ_pb_x600.png");
 
-        //Jonatan B
         dbHelper.saveToLocalDatabase("Domaine Grand Veneur","Les Champions","Between","The red wines can be fruity, sweet, spicy and packed with ripe, red berries. The wines can be sweet, fruity and easy to drink.","Heavy","Red","France","Not Very","Greater than $20","https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hf5/hcd/8815668854814.png");
         dbHelper.saveToLocalDatabase("Chateau D'Esclans","Blush Rose","Dry","This is full of mouthwatering flavor with a lovely texture. Lots of light fruit flavors with a clean finish, this wine does well to demonstrate the power of its grape.","Medium","White","France","Not Very","Greater than $20","https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/ha9/hbf/12357383290910.png");
         dbHelper.saveToLocalDatabase("Valserrano Rioja Reserva","Tempranillo","Dry","An elegant , savoury cuvee of Tempranillo and 10% Graciano with savoury tannins and fine, graceful, red berry and fresh herb notes.","Heavy","Red","Spain","Not Very","Greater than $20","https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hec/h42/10069521858590.png");
@@ -187,7 +213,6 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.saveToLocalDatabase("Gustave Lorentz","Alsace","Sweet","With this much spicy character and steely acidity can rarely be found for under $50.","Heavy","White","France","Somewhat","Greater than $20","https://dco67j8qsiydp.cloudfront.net/images/products/2021/02/2019_Gustave_Lorentz_Gewurztraminer_Reserve_Alsace_Bottleshot_compressed.png");
 
 
-
     }
 
     public void openWineDishes()
@@ -207,4 +232,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Wine_Survey.class);
         startActivity(intent);
     }
+
+    public void openProfileSetUp()
+    {
+        Toast.makeText(this, "You are signed out!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ProfileSetUp.class);
+        startActivity(intent);
+    }
+
+    public void openOnboardingAHelp()
+    {
+        Intent intent = new Intent(this, OnboardingActivityHelp.class);
+        startActivity(intent);
+    }
+
+
 }
