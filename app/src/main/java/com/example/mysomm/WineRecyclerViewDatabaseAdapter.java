@@ -52,12 +52,14 @@ public class WineRecyclerViewDatabaseAdapter extends RecyclerView.Adapter<WineRe
         return wines.size();
     }
 
+
+
     public void setWines(ArrayList<Wine> wines)
     {
         this.wines = wines;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView txtWine, txtType, txtTaste, txtDescription;
         private ImageView image;
@@ -70,8 +72,30 @@ public class WineRecyclerViewDatabaseAdapter extends RecyclerView.Adapter<WineRe
             txtDescription = itemView.findViewById(R.id.txtDescription);
             image = itemView.findViewById(R.id.image);
         }
+
+        @Override
+        public void onClick(View view) {
+            myEasyFlipView.flipTheView();
+            if (mClickListener != null) {
+                mClickListener.onItemClick(view, getAdapterPosition());
+            }
+        }
     }
 
+    // convenience method for getting data at click position
+    String getItem(int id) {
+        return mData.get(id);
+    }
 
+    // allows clicks events to be caught
+    void setClickListener(ItemClickListener itemClickListener) {
+        this.mClickListener = itemClickListener;
+    }
+
+    // parent activity will implement this method to respond to click events
+    public interface ItemClickListener {
+        void onItemClick(View view, int position);
+    }
 }
+
 
