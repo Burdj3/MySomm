@@ -1,3 +1,7 @@
+// SignUp.java
+// Jonatan Barrientos wrote this code
+//
+
 package com.example.mysomm;
 
 import android.content.Intent;
@@ -17,7 +21,7 @@ public class SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_singup);
+        setContentView(R.layout.activity_signup);
 
         emailSignUp = findViewById(R.id.signupemail);
         usernameSignUp = findViewById(R.id.signupusername);

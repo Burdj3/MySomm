@@ -1,3 +1,7 @@
+// VegWineRecommendation.java
+// Nicholas Fontenot wrote this code
+//
+
 package com.example.mysomm;
 
 import android.os.Bundle;

@@ -1,3 +1,7 @@
+// ScreenItem.java
+// Jonatan Barrientos wrote this code
+//
+
 package com.example.mysomm;
 
 public class ScreenItem {

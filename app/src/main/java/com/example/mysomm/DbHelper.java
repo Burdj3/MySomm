@@ -1,3 +1,7 @@
+// DbHelper.java
+// Srinath Subramanian wrote this code
+//
+
 package com.example.mysomm;
 
 import android.content.ContentValues;

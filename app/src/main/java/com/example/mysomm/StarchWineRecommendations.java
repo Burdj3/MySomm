@@ -1,3 +1,7 @@
+// StarchWineRecommendation.java
+// Nathan Scheffler wrote this code
+//
+
 package com.example.mysomm;
 
 import android.os.Bundle;

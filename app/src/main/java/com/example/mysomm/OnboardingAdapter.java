@@ -1,3 +1,7 @@
+// OnboardingAdapter.java
+// Jonatan Barrientos wrote this code
+//
+
 package com.example.mysomm;
 
 import android.content.Context;

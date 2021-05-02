@@ -1,3 +1,7 @@
+// Wine.java
+// Srinath Subramanian wrote this code
+//
+
 package com.example.mysomm;
 
 public class Wine {
