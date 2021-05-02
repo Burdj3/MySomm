@@ -1,3 +1,7 @@
+// Wine.java
+// Nicholas Fontenot wrote lines 64, 72-76
+// Srinath Subramanian wrote the remaining lines
+
 package com.example.mysomm;
 
 import android.content.Intent;

@@ -1,3 +1,8 @@
+// Wine.java
+// Nicholas Fontenot wrote lines 23-30, 74-78, 89
+// Srinath Subramanian wrote the remaining lines
+
+
 package com.example.mysomm;
 
 public class Wine {
