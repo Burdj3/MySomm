@@ -17,8 +17,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="329dp"
+        android:layout_height="362dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
@@ -89,7 +89,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="Survey"
+        android:text="Wine Survey"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"

@@ -107,7 +107,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sarabun_regular"
-        android:text="The wine collection displays all wines, giving the name, picture, and description of the wine."
+        android:text="The wine collection displays all types of wines, including the name, picture, and description of the wine."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
