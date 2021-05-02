@@ -1,7 +1,3 @@
-// Cured MeatWineRecommendation.java
-// Jack Burdick wrote this code
-//
-
 package com.example.mysomm;
 
 import android.os.Bundle;

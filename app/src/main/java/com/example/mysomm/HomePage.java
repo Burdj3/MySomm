@@ -1,8 +1,3 @@
-// HomePage.java
-// Jack Burdick, Srinath Subramanian, Jonatan Barrientos,
-// Pablo Canales, Nicholas Fontenot, Nathan Scheffler wrote this code
-//
-
 package com.example.mysomm;
 
 import android.content.Intent;

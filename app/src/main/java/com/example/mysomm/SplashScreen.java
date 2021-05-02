@@ -1,7 +1,3 @@
-// SplashScreen.java
-// Jonatan Barrientos wrote this code
-//
-
 package com.example.mysomm;
 
 

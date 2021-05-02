@@ -1,7 +1,3 @@
-// OnboardingPageTransformer.java
-// Jonatan Barrientos wrote this code
-//
-
 package com.example.mysomm;
 
 import android.view.View;

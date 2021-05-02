@@ -1,7 +1,3 @@
-// ChickenWineRecommendation.java
-// Srinath Subramanian wrote this code
-//
-
 package com.example.mysomm;
 
 import androidx.appcompat.app.AppCompatActivity;
